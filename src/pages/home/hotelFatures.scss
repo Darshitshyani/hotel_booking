@@ -1,0 +1,492 @@
+.tabs {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  .tab-btns {
+    display: flex;
+    gap: 10px;
+    p {
+      font-size: 20px;
+      font-family: "poppins";
+      font-weight: 600;
+      height: 50px;
+      width: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  .active-tabs {
+    background-color: #115e59;
+    color: white;
+    border-radius: 30px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+  }
+
+  .viewall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    cursor: pointer;
+    p {
+      margin-bottom: 0px;
+      font-size: 18px;
+      font-family: "poppins";
+      font-weight: 600;
+    }
+  }
+}
+
+.hotels-sec {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  .hotel-card {
+    background-color: white;
+    height: 420px;
+    width: 320px;
+    border-radius: 20px;
+
+    .slider-Hotel-img {
+      position: relative;
+      .slick-next {
+        display: none !important;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        right: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5px;
+
+        &::before {
+          content: ">";
+          height: 100%;
+          z-index: 2;
+          color: black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .slick-prev {
+        display: none !important;
+        border: 1px solid rgb(231, 232, 236);
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: 14px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5px;
+        &::before {
+          content: "<";
+          height: 100%;
+          z-index: 2;
+          color: black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .slick-dots {
+        display: none !important;
+        position: absolute;
+        top: 190px;
+        li {
+          color: white;
+        }
+        & li.slick-active button:before {
+          width: 20;
+          opacity: 1;
+          color: white;
+        }
+      }
+      .like-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 1;
+        right: 15px;
+        top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        cursor: pointer;
+
+        svg {
+          width: 28px;
+          height: 28px;
+          color: white;
+          opacity: 2;
+        }
+      }
+    }
+  }
+  .hotel-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: 0.5s;
+    .slick-next,
+    .slick-prev {
+      display: block !important;
+      border: 1px solid black;
+      transition: 0.5s;
+    }
+    .slick-dots {
+      transition: 0.5s;
+      display: block !important;
+    }
+  }
+
+  .hotel-discpration {
+    padding: 20px;
+  }
+}
+
+.House-Hotel-slider {
+  margin-top: 80px;
+
+  .slick-next {
+    position: absolute;
+    top: 530px;
+    right: 51%;
+    background-color: white;
+    width: 50px !important;
+    height: 50px !important;
+    &::before {
+      content: "<";
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: 530px;
+    left: 50%;
+    background-color: white;
+    width: 50px !important;
+    height: 50px !important;
+    &::before {
+      content: ">";
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+}
+.newsletter {
+  margin-top: 150px;
+  .writer-sec {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    h1 {
+      font-family: "poppins";
+      font-weight: 900;
+      color: black;
+    }
+
+    .input-boxes {
+      border: 1px solid #e5e7eb;
+      width: 70%;
+      height: 50px;
+      border-radius: 30px;
+      input {
+        border: 0px !important;
+        margin-left: 20px;
+        height: 100%;
+        font-size: 18px;
+        font-family: "poppins";
+        align-items: center;
+        &:focus {
+          outline: none !important;
+        }
+      }
+      button {
+        width: 48px;
+        border-radius: 50%;
+        border: 0px;
+        height: 45px;
+        margin-top: 2px;
+        background-color: #4f46e5;
+        color: white;
+        margin-right: 2px;
+      }
+    }
+  }
+}
+.author-sec {
+  margin-top: 150px;
+  background-color: #fff7ed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+
+  h1 {
+    margin-top: 60px;
+    font-family: "poppins";
+    font-weight: 900;
+    color: black;
+  }
+  p {
+    font-family: "poppins";
+    font-size: 25px;
+  }
+  .btns-auth {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    gap: 20px;
+    .p11 {
+      width: 160px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 0px;
+      border-radius: 30px;
+      border: 1px solid #e5e7eb;
+      font-family: "poppins";
+      color: black;
+    }
+    .p2 {
+      width: 160px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 0px;
+      border-radius: 30px;
+      background-color: rgb(79, 70, 229);
+      font-family: "poppins";
+      color: white;
+      font-size: 18px;
+    }
+  }
+}
+.user-map {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.user-card {
+  border: 1px solid #e5e7eb;
+  width: 280px;
+  height: 250px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 30px;
+  img {
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  .ratings {
+    background-color: #f3f4f6;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-top: 15px;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  &:hover {
+    background-color: #fafafb;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+.explore {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    font-family: "poppins";
+    font-weight: 900;
+    color: black;
+    font-size: 52px;
+  }
+
+  .loop-secs {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .drive-card {
+    position: relative;
+    width: 300px;
+    height: 160px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+    }
+    div {
+      p {
+        margin-bottom: 5px;
+        font-family: "poppins";
+        font-size: 16px;
+      }
+    }
+
+    .numbers {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background-color: #f3f4f6;
+      width: 50px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      p {
+        margin-bottom: 0px;
+        font-family: "poppins";
+        font-size: 14px;
+      }
+    }
+    &:hover {
+      background-color: #fafafb;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+}
+
+.choose {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f4f6;
+  padding: 60px;
+  border-radius: 35px;
+  .text-secs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    h1 {
+      font-family: "poppins";
+      color: black;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 20px;
+      font-family: "poppins";
+      font-size: 20px;
+    }
+    button {
+      margin-top: 20px;
+      width: 300px;
+      height: 55px;
+      border-radius: 40px;
+      background-color: #4f46e5;
+      font-family: "poppins";
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      border: 0px;
+    }
+  }
+}
+.Explore {
+  margin-top: 60px;
+  h1 {
+    color: black;
+  }
+}
+.housetwoslider {
+  margin-top: 20px;
+  .slick-next {
+    position: absolute;
+    top: -40px;
+    right: 70px;
+    background-color: white;
+    width: 50px !important;
+    height: 50px !important;
+    &::before {
+      content: "<";
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: -40px;
+    left: 95% !important;
+    background-color: white;
+    width: 50px !important;
+    height: 50px !important;
+    &::before {
+      content: ">";
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+}
